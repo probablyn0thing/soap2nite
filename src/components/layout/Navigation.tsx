@@ -98,29 +98,21 @@ export function Navigation(props: NavigationProps) {
                 target="_blank"
                 rel="noreferrer"
                 className="text-xl text-white tabbable rounded-full"
-              >
-                
-              </a>
+              />
               <a
                 href={conf().GITHUB_LINK}
                 target="_blank"
                 rel="noreferrer"
                 className="text-xl text-white tabbable rounded-full"
-              >
-                
-              </a>
+              />
               <a
                 onClick={() => handleClick("/discover")}
                 rel="noreferrer"
                 className="text-xl text-white tabbable rounded-full"
-              >
-                
-              </a>
+              />
             </div>
             <div className="relative pointer-events-auto">
-              <LinksDropdown>
-                {loggedIn ? <UserAvatar withName /> : <NoUserAvatar />}
-              </LinksDropdown>
+              {loggedIn ? <UserAvatar withName /> : <NoUserAvatar />}
             </div>
           </div>
         </div>
