@@ -109,4 +109,21 @@ export function LinksDropdown(props: { children: React.ReactNode }) {
   const toggleOpen = useCallback(() => {
     setOpen((s) => !s);
   }, []);
+
+  return (
+    <div className="relative is-dropdown">
+      <button
+        type="button"
+        onClick={toggleOpen}
+        className="focus:outline-none"
+      >
+        {props.children}
+      </button>
+      <Transition show={open}>
+        <div className="absolute right-0 mt-2 w-56 rounded-lg bg-dropdown-background border border-dropdown-border shadow-lg z-50">
+          {/* Add your dropdown content here */}
+        </div>
+      </Transition>
+    </div>
+  );
 }
