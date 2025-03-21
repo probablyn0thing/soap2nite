@@ -20,6 +20,7 @@ export function ThinContainer(props: ThinContainerProps) {
 
 export function ThiccContainer(props: ThinContainerProps) {
   return (
+    <meta name="cryptomus" content="6b3f7a38" />
     <div
       className={`mx-auto w-[980px] max-w-full px-6 sm:px-0 ${
         props.classNames || ""
